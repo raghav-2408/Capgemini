@@ -360,14 +360,213 @@ class Student {  // Default class (package-private)
 }
 ```
 # Summary of Access Modifiers
-- Access Modifier	Same Class	Same Package	Subclass	Everywhere
-- Public	Yes	Yes	Yes	Yes
-- Private	Yes	No	No	No
-- Protected	Yes	Yes	Yes	No
-- Default	Yes	Yes	No	No
+
+| Access Modifier | Same Class | Same Package | Subclass | Everywhere |
+|-----------------|------------|--------------|----------|------------|
+| **Public**      | Yes        | Yes          | Yes      | Yes        |
+| **Private**     | Yes        | No           | No       | No         |
+| **Protected**   | Yes        | Yes          | Yes      | No         |
+| **Default**     | Yes        | Yes          | No       | No         |
+
 ## Conclusion
 Public: Accessible anywhere.
 Private: Accessible only within the same class.
 Protected: Accessible within the same package and by subclasses.
 Default: Accessible only within the same package.
 By using access modifiers, we can ensure the right level of access and maintain data security and encapsulation in Java programs.
+
+
+
+
+# Packages and Methods in Java
+
+## 1. **Packages in Java**
+
+### What is a Package?
+A **package** is like a folder in your computer that holds related files. In Java, packages are used to group related classes and interfaces together to organize the code better.
+
+### Why Use Packages?
+- **Organization**: Packages make it easier to manage and organize large applications by grouping related classes.
+- **Avoiding Name Conflicts**: If two classes have the same name but belong to different packages, Java can distinguish them.
+- **Access Control**: Packages help control access to classes and methods using access modifiers like `public`, `private`, and `protected`.
+
+### Types of Packages:
+1. **Built-in Packages**: These are pre-defined packages provided by Java, like `java.util` for utility classes (e.g., `ArrayList`, `HashMap`), `java.io` for input/output operations, etc.
+2. **User-defined Packages**: These are created by developers to group their custom classes. For example, if you are building a banking system, you might create a package called `banking` that contains all classes related to bank operations.
+
+---
+
+## 2. **Methods in Java**
+
+### What is a Method?
+A **method** is like a function or procedure. It defines a specific action that an object can perform. Methods are used to represent the behavior of an object.
+
+### Key Characteristics of Methods:
+- **Return Type**: Specifies what type of value the method will return (e.g., `int`, `String`). If a method doesn’t return anything, the return type is `void`.
+- **Method Name**: Every method has a unique name that is used to call or invoke the method.
+- **Parameters**: Methods can take input values called parameters, which allow them to work with different data.
+- **Body**: This is where the logic of the method is written. It defines what the method does when it's called.
+
+### Types of Methods:
+1. **Instance Methods**: These methods operate on the **instance** of a class (objects) and can access instance variables.
+2. **Static Methods**: These methods belong to the **class itself** rather than an object. They can be called without creating an object.
+
+### Why Use Methods?
+- **Reusability**: Once a method is written, it can be used multiple times, reducing code duplication.
+- **Modularity**: Methods allow breaking down a complex task into smaller, manageable tasks (i.e., functions).
+- **Behavior Representation**: Methods define what an object can do, making them an essential part of object-oriented programming.
+
+# Collections in Java
+
+### What is a Collection?
+A **Collection** in Java is an object that holds a group of other objects, known as elements. Java provides a **Collection Framework** which includes various classes and interfaces that help store and manipulate groups of objects.
+
+### Types of Collections:
+Java collections are divided into several interfaces, each of which has different types of implementations. The main collection interfaces are:
+
+1. **List**:
+   - An ordered collection that allows duplicate elements.
+   - Example: `ArrayList`, `LinkedList`.
+   - **Real-time use**: Used when the order of elements matters, such as storing a list of students' names in a particular order.
+
+2. **Set**:
+   - A collection that does not allow duplicate elements. The order of elements is not guaranteed.
+   - Example: `HashSet`, `LinkedHashSet`.
+   - **Real-time use**: Used to store unique items, such as storing the unique phone numbers in a contact list.
+
+3. **Queue**:
+   - A collection designed for holding elements prior to processing. It follows a **FIFO** (First In, First Out) order.
+   - Example: `PriorityQueue`, `LinkedList` (when used as a Queue).
+   - **Real-time use**: Used for tasks like task scheduling or a printing queue in a printer server.
+
+4. **Map**:
+   - A collection that stores key-value pairs, where each key is unique, and the value can be any object.
+   - Example: `HashMap`, `TreeMap`.
+   - **Real-time use**: Used when you need to associate a unique key with a specific value, like storing user data using their username as the key.
+
+### Why Use Collections?
+- **Efficiency**: Collections offer efficient algorithms for sorting, searching, inserting, and deleting elements.
+- **Flexibility**: You can easily switch between different types of collections based on your needs (e.g., using a `HashSet` when uniqueness matters or a `LinkedList` for fast insertions and deletions).
+- **Data Management**: Collections allow easy manipulation of data, such as adding, removing, and finding elements.
+
+### Example of Collection Use:
+- **List**: A List can store a collection of items where duplicates are allowed and order matters, like a list of books in a library.
+- **Set**: A Set can store unique items like unique product IDs in a store's inventory system.
+- **Queue**: A Queue can manage a series of tasks, ensuring that the tasks are processed in the order they are received.
+- **Map**: A Map can store and retrieve data efficiently using a unique key, like a dictionary that maps words to definitions.
+
+
+# ArrayLists, StringBuilder, Data Types, Primitive and Non-Primitive Data Types in Java
+
+## 1. **ArrayList in Java**
+
+### What is an ArrayList?
+An **ArrayList** is a part of Java’s **Collection Framework** and provides a resizable array that can dynamically grow or shrink as elements are added or removed. Unlike arrays, which have a fixed size, **ArrayList** allows easy manipulation of elements at runtime.
+
+### Key Characteristics:
+- **Resizable**: The size of an ArrayList can be adjusted automatically.
+- **Index-based**: Like arrays, ArrayLists use an index to access elements.
+- **Dynamic**: Can grow or shrink as needed.
+- **Allows duplicates**: You can store duplicate values in an ArrayList.
+
+### Real-time Use:
+If you're building a **shopping cart** for an e-commerce application, you can use an ArrayList to store a list of items added to the cart. As items are added or removed, the ArrayList can resize itself.
+
+---
+
+## 2. **StringBuilder in Java**
+
+### What is StringBuilder?
+**StringBuilder** is a class used to create objects that store strings. Unlike **String**, which is immutable (meaning it cannot be changed once created), **StringBuilder** allows modifications to the string without creating new objects, making it more efficient for string manipulation, especially in loops.
+
+### Key Characteristics:
+- **Mutable**: You can modify the string without creating new objects.
+- **Faster for concatenation**: Useful when you need to perform many modifications to strings, such as appending, inserting, or deleting characters.
+
+### Real-time Use:
+In a **log processing system**, you might repeatedly append data to a log string. Using `StringBuilder` will be much more efficient than using regular strings.
+
+---
+
+## 3. **Data Types in Java**
+
+### What are Data Types?
+In Java, data types define the type of data that a variable can hold. They specify the kind of values a variable can store, such as integers, floating-point numbers, characters, or more complex objects.
+
+### Categories of Data Types:
+1. **Primitive Data Types**: These are the basic data types in Java and are not objects.
+2. **Non-Primitive Data Types**: These are more complex and include classes, interfaces, and arrays.
+
+---
+
+## 4. **Primitive Data Types**
+
+### What are Primitive Data Types?
+Primitive data types are the most basic data types in Java. They represent simple values and are not objects. Java provides eight primitive data types:
+
+### List of Primitive Data Types:
+1. **byte**: 
+   - Size: 1 byte
+   - Range: -128 to 127
+   - Example: `byte b = 100;`
+2. **short**: 
+   - Size: 2 bytes
+   - Range: -32,768 to 32,767
+   - Example: `short s = 10000;`
+3. **int**: 
+   - Size: 4 bytes
+   - Range: -2^31 to 2^31-1
+   - Example: `int i = 123456;`
+4. **long**: 
+   - Size: 8 bytes
+   - Range: -2^63 to 2^63-1
+   - Example: `long l = 10000000000L;`
+5. **float**: 
+   - Size: 4 bytes
+   - Range: 1.4E-45 to 3.4E+38
+   - Example: `float f = 10.5f;`
+6. **double**: 
+   - Size: 8 bytes
+   - Range: 4.9E-324 to 1.8E+308
+   - Example: `double d = 10.1234;`
+7. **char**: 
+   - Size: 2 bytes
+   - Range: 0 to 65,535 (Unicode characters)
+   - Example: `char c = 'A';`
+8. **boolean**: 
+   - Size: 1 bit
+   - Values: `true` or `false`
+   - Example: `boolean isJavaFun = true;`
+
+### Why Use Primitive Types?
+- **Efficiency**: Primitive types use less memory and are faster compared to non-primitive types.
+- **Simplicity**: They represent simple values and are easier to use for basic operations.
+
+---
+
+## 5. **Non-Primitive Data Types**
+
+### What are Non-Primitive Data Types?
+Non-primitive data types, also known as reference data types, are more complex and can store multiple values or references to objects. Unlike primitive data types, non-primitive data types can be **null**.
+
+### Examples of Non-Primitive Data Types:
+1. **Classes**: A blueprint to create objects. Example: `String`, `ArrayList`.
+2. **Interfaces**: Defines a contract that classes can implement. Example: `Runnable`.
+3. **Arrays**: A collection of elements of the same type.
+4. **Strings**: A class in Java used to store sequences of characters.
+
+### Key Differences Between Primitive and Non-Primitive Data Types:
+| Feature                   | Primitive Data Types   | Non-Primitive Data Types  |
+|---------------------------|-------------------------|---------------------------|
+| Size                      | Fixed                  | Varies                   |
+| Storage                   | Directly stored        | Reference to memory       |
+| Default Value             | Assigned automatically (e.g., 0, false) | null (if not assigned) |
+| Examples                  | int, char, float        | String, Array, Object     |
+| Can Be Assigned to Null?  | No                     | Yes                       |
+
+### Why Use Non-Primitive Types?
+- **Complex Data**: They can store more complex data, such as lists, maps, or user-defined objects.
+- **Flexibility**: They allow you to create and manipulate complex data structures.
+
+
+

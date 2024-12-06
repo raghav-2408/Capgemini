@@ -24,6 +24,7 @@
   A `StringBuilder` is similar to `StringBuffer` as it is also mutable. However, it is not synchronized, meaning it is not thread-safe but offers better performance in single-threaded operations.
 
 
+---
 
 ### What is Serialization?
 
